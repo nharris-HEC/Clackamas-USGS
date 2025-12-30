@@ -28,7 +28,6 @@ url = (
     "&huc=17090011&siteStatus=active"
     "&parameterCd=" + ",".join(param_map.keys()) +
     "&period=P1D"
-    f"&_={int(time.time() * 1000)}"  # Cache buster
 )
 
 response = requests.get(url, headers={"Cache-Control": "no-cache"})
